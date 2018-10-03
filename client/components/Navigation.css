@@ -1,8 +1,9 @@
-.navigation {
+.topNav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 12px; */
+  padding-top: 12px;
+  padding-bottom: 12px;
   background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)
     no-repeat center;
   background-size: cover;
@@ -16,7 +17,6 @@
 }
 
 .logo {
-  flex-direction: column;
   margin-right: 15px;
   width: 80px;
   height: 40px;
@@ -24,9 +24,95 @@
   background-size: 80px 40px;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .search {
-  flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
   height: 40px;
+  padding-right: 10px;
+  line-height: 20px;
   background: white;
   border-radius: 4px 0 0 4px;
+}
+
+.place {
+  border-radius: 0;
+}
+
+.search > .inputHeading {
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search > .input {
+  flex-grow: 1;
+  border: none;
+  margin-bottom: 1px;
+  padding-left: 7px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search > .divider {
+  border-left: solid 1px rgb(197, 197, 197);
+}
+
+.searchButton {
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  line-height: 36px;
+  background: #bd1f1f;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+}
+
+.loginButton {
+  width: 65px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: #bd1f1f;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 620;
+  outline: none;
+  margin-right: 5px;
+}
+
+.signUpButton {
+  width: 75px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-size: 15px;
+  font-weight: 620;
+  outline: none;
+}
+
+.bottomNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fafafa !important;
+  background-size: cover;
+}
+
+.bottom {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
 }
