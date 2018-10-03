@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  webapp:
+    image: db
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    environment:
+      PORT: 3000
+      pghost: postgres
+      pguser: Kevin
+      pgpass: ''
+    ports: 
+      - 3000:3000
+
+  postgres:
+    image: postgres:9.6.2-alpine
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: Kevin
+      POSTGRES_DB: yelp
+    ports:
+      - "5432:5432"

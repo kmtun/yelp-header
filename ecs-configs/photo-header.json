@@ -1,0 +1,18 @@
+{
+    "family": "display-header",
+    "containerDefinitions": [
+        {
+            "name": "photo-header",
+            "image": "502405210352.dkr.ecr.us-east-1.amazonaws.com/photo-header",
+            "cpu": 8,
+            "memory": 450,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 80
+                }
+            ],
+            "essential": true
+        }
+    ]
+}

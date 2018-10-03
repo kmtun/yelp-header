@@ -1,0 +1,32 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 12px; */
+  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)
+    no-repeat center;
+  background-size: cover;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.top {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.logo {
+  flex-direction: column;
+  margin-right: 15px;
+  width: 80px;
+  height: 40px;
+  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);
+  background-size: 80px 40px;
+}
+
+.search {
+  flex-direction: column;
+  height: 40px;
+  background: white;
+  border-radius: 4px 0 0 4px;
+}
