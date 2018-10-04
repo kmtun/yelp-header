@@ -64,6 +64,12 @@ const Navigation = () => (
           </span>
           <span>Home Services</span>
         </div>
+
+        <div className={`${styles.item} ${styles.dot}`}>&middot;</div>
+        <div className={styles.item}>Write a review</div>
+        <div className={styles.item}>Events</div>
+        <div className={styles.item}>Talk</div>
+        <div className={styles.item}>Collections</div>
       </div>
     </div>
   </div>

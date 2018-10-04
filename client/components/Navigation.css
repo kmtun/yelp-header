@@ -75,10 +75,6 @@
   margin-right: 15px;
 }
 
-.searchButton:hover {
-  cursor: pointer;
-}
-
 .loginButton {
   width: 65px;
   height: 40px;
@@ -103,16 +99,43 @@
   outline: none;
 }
 
-.bottomNav {
-  display: flex;
-  max-width: 1000px;
-  width: 100%;
-}
-
 .bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   background: #bd1f1f;
+}
+
+.bottomNav {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.item {
+  padding: 3px 15px 3px 0px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 560;
+  line-height: 21px;
+  border-radius: 3px;
+}
+
+.item > .icon {
+  padding-right: 6px;
+}
+
+.signUpButton:hover,
+.loginButton:hover,
+.item:hover,
+.searchButton:hover {
+  background: rgba(51, 51, 51, 0.3);
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: none;
+  cursor: auto;
 }

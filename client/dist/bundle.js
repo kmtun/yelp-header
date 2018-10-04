@@ -2228,7 +2228,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var dbURL = 'http://localhost:3000';
+var dbURL = "http://localhost:3000";
 
 var Header = function (_Component) {
   _inherits(Header, _Component);
@@ -2239,31 +2239,31 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
     _this.state = {
-      static_nav_links: ['Restaurants', 'Nightlife', 'Home Services'],
-      static_nav_links_2: ['Write a review', 'Events', 'Talk', 'Collections'],
-      name: '',
+      static_nav_links: ["Restaurants", "Nightlife", "Home Services"],
+      static_nav_links_2: ["Write a review", "Events", "Talk", "Collections"],
+      name: "",
       address: [],
-      phone: '',
-      url: '',
-      google_map: '',
+      phone: "",
+      url: "",
+      google_map: "",
       categories: [],
-      actions: ['Add Photo', 'Share', 'Save']
+      actions: ["Add Photo", "Share", "Save"]
     };
     return _this;
   }
 
   _createClass(Header, [{
-    key: 'componentWillMount',
+    key: "componentWillMount",
     value: function componentWillMount() {
       this.getRestaurant(4);
     }
   }, {
-    key: 'getRestaurant',
+    key: "getRestaurant",
     value: function getRestaurant(id) {
       var _this2 = this;
 
       // axios.get(dbURL + '/api/fetchRestaurant/' + id)
-      _axios2.default.get(dbURL + '/api/fetchRestaurant/' + id).then(function (_ref) {
+      _axios2.default.get(dbURL + "/api/fetchRestaurant/" + id).then(function (_ref) {
         var data = _ref.data;
 
         // const data = res.data;
@@ -2277,16 +2277,16 @@ var Header = function (_Component) {
           categories: data.categories
         });
       }).catch(function (err) {
-        console.log('Err in getRestaurant: ', err);
+        console.log("Err in getRestaurant: ", err);
       });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
-      var nav_bar_icons = ['fas fa-utensils', 'fas fa-glass-martini', 'fas fa-screwdriver'];
-      var action_icons = ['fas fa-camera', 'far fa-share-square', 'fas fa-bookmark'];
+      var nav_bar_icons = ["fas fa-utensils", "fas fa-glass-martini", "fas fa-screwdriver"];
+      var action_icons = ["fas fa-camera", "far fa-share-square", "fas fa-bookmark"];
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(_Navigation2.default, null),
         _react2.default.createElement(
@@ -2302,46 +2302,61 @@ var Header = function (_Component) {
                 _style2.default.rest_details.title_claim_div,
                 null,
                 _react2.default.createElement(
-                  'h1',
-                  { style: { fontSize: '38px', fontWeight: 'bold', display: 'inline', paddingRight: '10px' } },
+                  "h1",
+                  {
+                    style: {
+                      fontSize: "38px",
+                      fontWeight: "bold",
+                      display: "inline",
+                      paddingRight: "10px"
+                    }
+                  },
                   this.state.name
                 ),
                 _react2.default.createElement(
-                  'div',
-                  { style: { display: 'inline-block' } },
+                  "div",
+                  { style: { display: "inline-block" } },
                   _react2.default.createElement(
-                    'span',
-                    { style: { width: '18px', height: '18px', paddingRight: '10px' } },
-                    _react2.default.createElement('i', { className: 'far fa-check-circle' })
+                    "span",
+                    {
+                      style: {
+                        width: "18px",
+                        height: "18px",
+                        paddingRight: "10px"
+                      }
+                    },
+                    _react2.default.createElement("i", { className: "far fa-check-circle" })
                   ),
-                  'Claimed'
+                  "Claimed"
                 )
               ),
               _react2.default.createElement(
                 _style2.default.rest_details.ratings_div,
                 null,
-                _react2.default.createElement(_style2.default.rest_details.rating_stars, { style: { backgroundPosition: '0 -192px' } }),
+                _react2.default.createElement(_style2.default.rest_details.rating_stars, {
+                  style: { backgroundPosition: "0 -192px" }
+                }),
                 _react2.default.createElement(
-                  'span',
-                  { style: { color: '#666' } },
-                  ' 46 Reviews '
+                  "span",
+                  { style: { color: "#666" } },
+                  " 46 Reviews "
                 )
               ),
               _react2.default.createElement(
                 _style2.default.rest_details.category_div,
                 null,
                 _react2.default.createElement(
-                  'span',
-                  { style: { letterSpacing: '1px' } },
-                  ' $$   \xB7 '
+                  "span",
+                  { style: { letterSpacing: "1px" } },
+                  " $$ \xB7 "
                 ),
                 this.state.categories.map(function (value, index) {
                   return _react2.default.createElement(
                     _style2.default.rest_details.category,
-                    { href: '/', key: index },
-                    ' ',
+                    { href: "/", key: index },
+                    " ",
                     value,
-                    ' '
+                    " "
                   );
                 })
               )
@@ -2354,9 +2369,9 @@ var Header = function (_Component) {
                 null,
                 _react2.default.createElement(
                   _style2.default.rest_details.review_button,
-                  { href: '/' },
-                  _react2.default.createElement('i', { className: 'fas fa-star' }),
-                  ' Write a review'
+                  { href: "/" },
+                  _react2.default.createElement("i", { className: "fas fa-star" }),
+                  " Write a review"
                 )
               ),
               _react2.default.createElement(
@@ -2365,9 +2380,9 @@ var Header = function (_Component) {
                 this.state.actions.map(function (value, index) {
                   return _react2.default.createElement(
                     _style2.default.rest_details.action_button,
-                    { key: index, href: '/' },
-                    _react2.default.createElement('i', { className: action_icons[index] }),
-                    ' ',
+                    { key: index, href: "/" },
+                    _react2.default.createElement("i", { className: action_icons[index] }),
+                    " ",
                     value
                   );
                 })
@@ -2381,7 +2396,11 @@ var Header = function (_Component) {
               _style2.default.rest_subheader.mapBox,
               null,
               _react2.default.createElement(_mapBox2.default, { map: this.state.google_map }),
-              _react2.default.createElement(_mapDetails2.default, { address: this.state.address, phone: this.state.phone, url: this.state.url })
+              _react2.default.createElement(_mapDetails2.default, {
+                address: this.state.address,
+                phone: this.state.phone,
+                url: this.state.url
+              })
             ),
             _react2.default.createElement(_photos2.default, null)
           )
@@ -3429,6 +3448,31 @@ var Navigation = function Navigation() {
             null,
             "Home Services"
           )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.item + " " + _Navigation2.default.dot },
+          "\xB7"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.item },
+          "Write a review"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.item },
+          "Events"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.item },
+          "Talk"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.item },
+          "Collections"
         )
       )
     )
@@ -3869,7 +3913,7 @@ exports = module.exports = __webpack_require__(17)(false);
 
 
 // module
-exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__searchButton___3XKcE:hover {\n  cursor: pointer;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  background: #bd1f1f;\n}\n", ""]);
+exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  background: #bd1f1f;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__item___2g1bO {\n  padding: 3px 15px 3px 0px;\n  color: #fff;\n  text-decoration: none;\n  font-size: 15px;\n  font-weight: 560;\n  line-height: 21px;\n  border-radius: 3px;\n}\n\n.Navigation__item___2g1bO > .Navigation__icon___mXCZJ {\n  padding-right: 6px;\n}\n\n.Navigation__signUpButton___3QcfZ:hover,\n.Navigation__loginButton___YltNj:hover,\n.Navigation__item___2g1bO:hover,\n.Navigation__searchButton___3XKcE:hover {\n  background: rgba(51, 51, 51, 0.3);\n  cursor: pointer;\n}\n\n.Navigation__dot___l8L-Y:hover {\n  background: none;\n  cursor: auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3884,8 +3928,11 @@ exports.locals = {
 	"searchButton": "Navigation__searchButton___3XKcE",
 	"loginButton": "Navigation__loginButton___YltNj",
 	"signUpButton": "Navigation__signUpButton___3QcfZ",
+	"bottom": "Navigation__bottom___7c47x",
 	"bottomNav": "Navigation__bottomNav___2kyPM",
-	"bottom": "Navigation__bottom___7c47x"
+	"item": "Navigation__item___2g1bO",
+	"icon": "Navigation__icon___mXCZJ",
+	"dot": "Navigation__dot___l8L-Y"
 };
 
 /***/ }),
