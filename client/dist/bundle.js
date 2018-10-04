@@ -3390,8 +3390,18 @@ var Navigation = function Navigation() {
         { className: _Navigation2.default.bottom },
         _react2.default.createElement(
           "div",
-          { className: _Navigation2.default.logo },
-          " "
+          { className: _Navigation2.default.categories },
+          " Home services "
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.categories },
+          " Restaurants "
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: _Navigation2.default.categories },
+          " Auto services "
         )
       )
     )
@@ -3832,7 +3842,7 @@ exports = module.exports = __webpack_require__(17)(false);
 
 
 // module
-exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__searchButton___3XKcE:hover {\n  cursor: pointer;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #fafafa !important;\n  background-size: cover;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__searchButton___3XKcE:hover {\n  cursor: pointer;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #fafafa !important;\n  background-size: cover;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__categories___2zth2 {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  width: 170px;\n  padding-right: 12px;\n  border-left: solid 1px rgb(197, 197, 197);\n  color: black;\n  font-size: 13px;\n  font-weight: 600;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3848,7 +3858,8 @@ exports.locals = {
 	"loginButton": "Navigation__loginButton___YltNj",
 	"signUpButton": "Navigation__signUpButton___3QcfZ",
 	"bottomNav": "Navigation__bottomNav___2kyPM",
-	"bottom": "Navigation__bottom___7c47x"
+	"bottom": "Navigation__bottom___7c47x",
+	"categories": "Navigation__categories___2zth2"
 };
 
 /***/ }),

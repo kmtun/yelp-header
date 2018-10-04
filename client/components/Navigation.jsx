@@ -44,7 +44,9 @@ const Navigation = () => (
     {/* Bottom nav container */}
     <div className={styles.bottomNav}>
       <div className={styles.bottom}>
-        <div className={styles.logo}> </div>
+        <div className={styles.categories}> Home services </div>
+        <div className={styles.categories}> Restaurants </div>
+        <div className={styles.categories}> Auto services </div>
       </div>
     </div>
   </div>
