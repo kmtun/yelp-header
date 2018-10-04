@@ -1,4 +1,5 @@
-# yelp_frontend_capstone
+# Mock Yelp business Header
+Display title, photos, and general information for a business
 
 # To build components container
 docker build -t (container name) .
@@ -11,6 +12,3 @@ To run psql command, in bash shell - psql -U postgres
 Helpful docker commands - 
 Remove all stopped containers - docker rm $(docker ps -a -q)
 Get into running docker bash - docker exec -it (container ID) bash - to get into bash shell
-
-# To run grunt
-grunt
