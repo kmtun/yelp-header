@@ -42,11 +42,28 @@ const Navigation = () => (
     </div>
 
     {/* Bottom nav container */}
-    <div className={styles.bottomNav}>
-      <div className={styles.bottom}>
-        <div className={styles.categories}> Home services </div>
-        <div className={styles.categories}> Restaurants </div>
-        <div className={styles.categories}> Auto services </div>
+    <div className={styles.bottom}>
+      <div className={styles.bottomNav}>
+        <div className={styles.item}>
+          <span className={styles.icon}>
+            <i className="fas fa-utensils" />
+          </span>
+          <span>Restaurants</span>
+        </div>
+
+        <div className={styles.item}>
+          <span className={styles.icon}>
+            <i className="fas fa-glass-martini" />
+          </span>
+          <span>Nightlife</span>
+        </div>
+
+        <div className={styles.item}>
+          <span className={styles.icon}>
+            <i className="fas fa-screwdriver" />
+          </span>
+          <span>Home Services</span>
+        </div>
       </div>
     </div>
   </div>

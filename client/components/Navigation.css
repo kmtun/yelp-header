@@ -105,26 +105,14 @@
 
 .bottomNav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fafafa !important;
-  background-size: cover;
-}
-
-.bottom {
-  display: flex;
   max-width: 1000px;
   width: 100%;
 }
 
-.categories {
+.bottom {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  width: 170px;
-  padding-right: 12px;
-  border-left: solid 1px rgb(197, 197, 197);
-  color: black;
-  font-size: 13px;
-  font-weight: 600;
+  width: 100%;
+  background: #bd1f1f;
 }
