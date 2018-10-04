@@ -12,6 +12,7 @@
 
 .top {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1000px;
   width: 100%;
 }
@@ -109,6 +110,7 @@
 
 .bottomNav {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1000px;
   width: 100%;
 }

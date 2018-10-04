@@ -2255,7 +2255,7 @@ var Header = function (_Component) {
   _createClass(Header, [{
     key: "componentWillMount",
     value: function componentWillMount() {
-      this.getRestaurant(4);
+      this.getRestaurant(2);
     }
   }, {
     key: "getRestaurant",
@@ -2285,126 +2285,17 @@ var Header = function (_Component) {
     value: function render() {
       var nav_bar_icons = ["fas fa-utensils", "fas fa-glass-martini", "fas fa-screwdriver"];
       var action_icons = ["fas fa-camera", "far fa-share-square", "fas fa-bookmark"];
+      var _state = this.state,
+          name = _state.name,
+          address = _state.address,
+          phone = _state.phone,
+          url = _state.url,
+          categories = _state.categories;
+
       return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(_Navigation2.default, null),
-        _react2.default.createElement(
-          _style2.default.rest_details.h,
-          null,
-          _react2.default.createElement(
-            _style2.default.rest_details.rest_header,
-            null,
-            _react2.default.createElement(
-              _style2.default.rest_details.left_h,
-              null,
-              _react2.default.createElement(
-                _style2.default.rest_details.title_claim_div,
-                null,
-                _react2.default.createElement(
-                  "h1",
-                  {
-                    style: {
-                      fontSize: "38px",
-                      fontWeight: "bold",
-                      display: "inline",
-                      paddingRight: "10px"
-                    }
-                  },
-                  this.state.name
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { style: { display: "inline-block" } },
-                  _react2.default.createElement(
-                    "span",
-                    {
-                      style: {
-                        width: "18px",
-                        height: "18px",
-                        paddingRight: "10px"
-                      }
-                    },
-                    _react2.default.createElement("i", { className: "far fa-check-circle" })
-                  ),
-                  "Claimed"
-                )
-              ),
-              _react2.default.createElement(
-                _style2.default.rest_details.ratings_div,
-                null,
-                _react2.default.createElement(_style2.default.rest_details.rating_stars, {
-                  style: { backgroundPosition: "0 -192px" }
-                }),
-                _react2.default.createElement(
-                  "span",
-                  { style: { color: "#666" } },
-                  " 46 Reviews "
-                )
-              ),
-              _react2.default.createElement(
-                _style2.default.rest_details.category_div,
-                null,
-                _react2.default.createElement(
-                  "span",
-                  { style: { letterSpacing: "1px" } },
-                  " $$ \xB7 "
-                ),
-                this.state.categories.map(function (value, index) {
-                  return _react2.default.createElement(
-                    _style2.default.rest_details.category,
-                    { href: "/", key: index },
-                    " ",
-                    value,
-                    " "
-                  );
-                })
-              )
-            ),
-            _react2.default.createElement(
-              _style2.default.rest_details.right_h,
-              null,
-              _react2.default.createElement(
-                _style2.default.rest_details.divForReviewButton,
-                null,
-                _react2.default.createElement(
-                  _style2.default.rest_details.review_button,
-                  { href: "/" },
-                  _react2.default.createElement("i", { className: "fas fa-star" }),
-                  " Write a review"
-                )
-              ),
-              _react2.default.createElement(
-                _style2.default.rest_details.spanTagForAction,
-                null,
-                this.state.actions.map(function (value, index) {
-                  return _react2.default.createElement(
-                    _style2.default.rest_details.action_button,
-                    { key: index, href: "/" },
-                    _react2.default.createElement("i", { className: action_icons[index] }),
-                    " ",
-                    value
-                  );
-                })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _style2.default.rest_subheader.subH,
-            null,
-            _react2.default.createElement(
-              _style2.default.rest_subheader.mapBox,
-              null,
-              _react2.default.createElement(_mapBox2.default, { map: this.state.google_map }),
-              _react2.default.createElement(_mapDetails2.default, {
-                address: this.state.address,
-                phone: this.state.phone,
-                url: this.state.url
-              })
-            ),
-            _react2.default.createElement(_photos2.default, null)
-          )
-        )
+        _react2.default.createElement(_Navigation2.default, null)
       ) // main div components
       ;
     }
@@ -3913,7 +3804,7 @@ exports = module.exports = __webpack_require__(17)(false);
 
 
 // module
-exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  background: #bd1f1f;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__item___2g1bO {\n  padding: 3px 15px 3px 0px;\n  color: #fff;\n  text-decoration: none;\n  font-size: 15px;\n  font-weight: 560;\n  line-height: 21px;\n  border-radius: 3px;\n}\n\n.Navigation__item___2g1bO > .Navigation__icon___mXCZJ {\n  padding-right: 6px;\n}\n\n.Navigation__signUpButton___3QcfZ:hover,\n.Navigation__loginButton___YltNj:hover,\n.Navigation__item___2g1bO:hover,\n.Navigation__searchButton___3XKcE:hover {\n  background: rgba(51, 51, 51, 0.3);\n  cursor: pointer;\n}\n\n.Navigation__dot___l8L-Y:hover {\n  background: none;\n  cursor: auto;\n}\n", ""]);
+exports.push([module.i, ".Navigation__topNav___m2cX2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  background: #d3231c url(http://d31v1g4dpg9evw.cloudfront.net/header_stars.png)\n    no-repeat center;\n  background-size: cover;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Navigation__top___3fYJm {\n  display: flex;\n  flex-wrap: wrap;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__logo___AbXTO {\n  margin-right: 15px;\n  width: 80px;\n  height: 40px;\n  background-image: url(http://d31v1g4dpg9evw.cloudfront.net/default.png);\n  background-size: 80px 40px;\n}\n\n.Navigation__logo___AbXTO:hover {\n  cursor: pointer;\n}\n\n.Navigation__search___1Ah6o {\n  display: flex;\n  align-items: center;\n  flex-grow: 1;\n  height: 40px;\n  padding-right: 10px;\n  line-height: 20px;\n  background: white;\n  border-radius: 4px 0 0 4px;\n}\n\n.Navigation__place___11xFk {\n  border-radius: 0;\n}\n\n.Navigation__search___1Ah6o > .Navigation__inputHeading___1dwHf {\n  padding-left: 10px;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.Navigation__search___1Ah6o > .Navigation__input___1tllE {\n  flex-grow: 1;\n  border: none;\n  margin-bottom: 1px;\n  padding-left: 7px;\n  font-size: 14px;\n  outline: none;\n}\n\n.Navigation__search___1Ah6o > .Navigation__divider___2R15o {\n  border-left: solid 1px rgb(197, 197, 197);\n}\n\n.Navigation__searchButton___3XKcE {\n  width: 50px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  line-height: 36px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  margin-right: 15px;\n}\n\n.Navigation__loginButton___YltNj {\n  width: 65px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  background: #bd1f1f;\n  color: #fff;\n  font-size: 13px;\n  font-weight: 620;\n  outline: none;\n  margin-right: 5px;\n}\n\n.Navigation__signUpButton___3QcfZ {\n  width: 75px;\n  height: 40px;\n  border: none;\n  border-radius: 4px;\n  color: black;\n  font-size: 15px;\n  font-weight: 620;\n  outline: none;\n}\n\n.Navigation__bottom___7c47x {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  background: #bd1f1f;\n}\n\n.Navigation__bottomNav___2kyPM {\n  display: flex;\n  flex-wrap: wrap;\n  max-width: 1000px;\n  width: 100%;\n}\n\n.Navigation__item___2g1bO {\n  padding: 3px 15px 3px 0px;\n  color: #fff;\n  text-decoration: none;\n  font-size: 15px;\n  font-weight: 560;\n  line-height: 21px;\n  border-radius: 3px;\n}\n\n.Navigation__item___2g1bO > .Navigation__icon___mXCZJ {\n  padding-right: 6px;\n}\n\n.Navigation__signUpButton___3QcfZ:hover,\n.Navigation__loginButton___YltNj:hover,\n.Navigation__item___2g1bO:hover,\n.Navigation__searchButton___3XKcE:hover {\n  background: rgba(51, 51, 51, 0.3);\n  cursor: pointer;\n}\n\n.Navigation__dot___l8L-Y:hover {\n  background: none;\n  cursor: auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
