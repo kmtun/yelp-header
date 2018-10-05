@@ -5,6 +5,7 @@ import $ from "jquery";
 import axios from "axios";
 import styles from "./Header.css";
 import Navigation from "./Navigation.jsx";
+import Title from "./Title.jsx";
 import Mapdetails from "./mapDetails.jsx";
 import MapBox from "./mapBox.jsx";
 import Photos from "./photos.jsx";
@@ -29,7 +30,7 @@ class Header extends Component {
   }
 
   componentWillMount() {
-    this.getRestaurant(2);
+    this.getRestaurant(4);
   }
 
   getRestaurant(id) {
@@ -38,7 +39,6 @@ class Header extends Component {
       .get(dbURL + "/api/fetchRestaurant/" + id)
       .then(({ data }) => {
         // const data = res.data;
-        // console.log(data);
         this.setState({
           name: data.name,
           address: data.address,
@@ -63,10 +63,14 @@ class Header extends Component {
       "far fa-share-square",
       "fas fa-bookmark"
     ];
-    const { name, address, phone, url, categories } = this.state;
+
     return (
       <div>
         <Navigation />
+        <Title
+          name={this.state.name}
+          categories={this.state.categories.join(" ")}
+        />
       </div> // main div components
     );
   }
