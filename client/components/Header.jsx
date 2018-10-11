@@ -1,15 +1,12 @@
 import React from "react";
 import { Component } from "react";
-import css from "./style.jsx";
 import $ from "jquery";
 import axios from "axios";
+
 import styles from "./Header.css";
 import Navigation from "./Navigation.jsx";
 import Title from "./Title.jsx";
-import Mapdetails from "./mapDetails.jsx";
-import MapBox from "./mapBox.jsx";
-import Photos from "./photos.jsx";
-import ResHeader from "./restHeader.jsx";
+import Description from "./Description.jsx";
 
 const dbURL = "http://localhost:3000";
 
@@ -39,6 +36,7 @@ class Header extends Component {
       .get(dbURL + "/api/fetchRestaurant/" + id)
       .then(({ data }) => {
         // const data = res.data;
+        console.log(data);
         this.setState({
           name: data.name,
           address: data.address,
@@ -63,7 +61,8 @@ class Header extends Component {
       "far fa-share-square",
       "fas fa-bookmark"
     ];
-
+    // const address = this.state.address.join(" ");
+    // console.log(address);
     return (
       <div>
         <Navigation />
@@ -71,6 +70,13 @@ class Header extends Component {
           name={this.state.name}
           categories={this.state.categories.join(" ")}
         />
+        <div className={styles.main}>
+          <Description
+            address={this.state.address}
+            phone={this.state.phone}
+            url={this.state.url}
+          />
+        </div>
       </div> // main div components
     );
   }
