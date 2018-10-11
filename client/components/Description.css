@@ -22,6 +22,17 @@
   margin-top: 10px;
 }
 
+.icon {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+}
+
 .address {
   font-weight: bold;
+}
+
+.descriptionLinks > a {
+  color: #0073bb;
+  text-decoration: none;
 }

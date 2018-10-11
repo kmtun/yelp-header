@@ -3129,15 +3129,71 @@ var Description = function Description(_ref) {
       }),
       _react2.default.createElement(
         "div",
-        { className: _Description2.default.descriptionLinks + " " + _Description2.default.address },
+        { className: _Description2.default.descriptionLinks },
         _react2.default.createElement(
           "span",
           { className: _Description2.default.icon },
           _react2.default.createElement("i", { className: "fas fa-map-marker" })
         ),
-        address[0],
-        address[1],
-        address[2]
+        _react2.default.createElement(
+          "strong",
+          { className: _Description2.default.address },
+          address[0],
+          " ",
+          _react2.default.createElement("br", null)
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Description2.default.descriptionLinks },
+        _react2.default.createElement(
+          "span",
+          { className: _Description2.default.icon },
+          _react2.default.createElement("i", { className: "fas fa-map-signs" })
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: _Description2.default.text, href: "/" },
+          "Get Directions"
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Description2.default.descriptionLinks },
+        _react2.default.createElement(
+          "span",
+          { className: _Description2.default.icon },
+          _react2.default.createElement("i", { className: "fas fa-phone" })
+        ),
+        phone
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Description2.default.descriptionLinks },
+        _react2.default.createElement(
+          "span",
+          { className: _Description2.default.icon },
+          _react2.default.createElement("i", { className: "fas fa-external-link-alt" })
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: _Description2.default.text, href: "/" },
+          url
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Description2.default.descriptionLinks },
+        _react2.default.createElement(
+          "span",
+          { className: _Description2.default.icon },
+          _react2.default.createElement("i", { className: "fas fa-mobile-alt" })
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: _Description2.default.text, href: "/" },
+          "Send to your Phone"
+        )
       )
     )
   );
@@ -34112,7 +34168,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, ".Description__description___-2V6j {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  color: rgba(17, 16, 16, 0.904);\n}\n\n.Description__descriptionMap___2TmCw {\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #ccc;\n  padding: 5px 5px 10px 5px;\n  background: #fff;\n}\n\n.Description__map___oIoQ7 {\n  border: 1px solid #ccc;\n  width: 285px;\n  height: 135px;\n}\n\n.Description__descriptionLinks___2A6d- {\n  margin-top: 10px;\n}\n\n.Description__address___2Pw5t {\n  font-weight: bold;\n}\n", ""]);
+exports.push([module.i, ".Description__description___-2V6j {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  color: rgba(17, 16, 16, 0.904);\n}\n\n.Description__descriptionMap___2TmCw {\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #ccc;\n  padding: 5px 5px 10px 5px;\n  background: #fff;\n}\n\n.Description__map___oIoQ7 {\n  border: 1px solid #ccc;\n  width: 285px;\n  height: 135px;\n}\n\n.Description__descriptionLinks___2A6d- {\n  margin-top: 10px;\n}\n\n.Description__icon___3AWNH {\n  display: inline-block;\n  text-align: center;\n  width: 30px;\n}\n\n.Description__address___2Pw5t {\n  font-weight: bold;\n}\n\n.Description__descriptionLinks___2A6d- > a {\n  color: #0073bb;\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -34120,6 +34176,7 @@ exports.locals = {
 	"descriptionMap": "Description__descriptionMap___2TmCw",
 	"map": "Description__map___oIoQ7",
 	"descriptionLinks": "Description__descriptionLinks___2A6d-",
+	"icon": "Description__icon___3AWNH",
 	"address": "Description__address___2Pw5t"
 };
 
