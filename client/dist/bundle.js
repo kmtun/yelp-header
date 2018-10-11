@@ -3471,7 +3471,6 @@ var Title = function Title(_ref) {
   return _react2.default.createElement(
     "div",
     { className: _Title2.default.title },
-    console.log(categories),
     _react2.default.createElement(
       "div",
       null,
@@ -3511,6 +3510,34 @@ var Title = function Title(_ref) {
           { className: _Title2.default.category, href: "/" },
           " " + categories + " "
         )
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: _Title2.default.actions },
+      _react2.default.createElement(
+        "div",
+        { className: _Title2.default.actionReviews },
+        _react2.default.createElement("i", { className: "fas fa-star" }),
+        " Write a review"
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Title2.default.actionButton },
+        _react2.default.createElement("i", { className: "fas fa-camera" }),
+        " Add Photo"
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Title2.default.actionButton },
+        _react2.default.createElement("i", { className: "far fa-share-square" }),
+        " Share"
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: _Title2.default.actionButton },
+        _react2.default.createElement("i", { className: "fas fa-bookmark" }),
+        " Save"
       )
     )
   );
@@ -3986,13 +4013,20 @@ exports = module.exports = __webpack_require__(9)(false);
 
 
 // module
-exports.push([module.i, ".Title__title___92UwW {\n  display: flex;\n  justify-content: space-between;\n  margin: auto;\n  padding-top: 25px;\n  max-width: 1000px;\n  width: 100%;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Title__claimed___2tU1Q {\n  font-size: 14px;\n}\n.Title__name___1LShh {\n  margin: 0;\n  padding-right: 10px;\n  font-size: 33px;\n  font-weight: 560;\n  color: rgba(17, 16, 16, 0.904);\n}\n", ""]);
+exports.push([module.i, ".Title__title___92UwW {\n  display: flex;\n  justify-content: space-between;\n  margin: auto;\n  padding-top: 25px;\n  max-width: 1000px;\n  width: 100%;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.Title__claimed___2tU1Q {\n  font-size: 14px;\n}\n.Title__name___1LShh {\n  margin: 0;\n  padding-right: 10px;\n  font-size: 33px;\n  font-weight: 560;\n  color: rgba(17, 16, 16, 0.904);\n}\n\n.Title__reviewsContainer___3buv0 {\n  margin-top: 15px;\n  font-size: 16px;\n}\n\n.Title__reviewsContainer___3buv0 > span {\n  color: #666;\n}\n\n/* .reviews {\n  color: #666;\n} */\n\n.Title__stars___7Rt1K {\n  background: url(http://d31v1g4dpg9evw.cloudfront.net/stars.png);\n  background-position: 0 -192px;\n  background-size: 132px 560px;\n  display: inline-block;\n  vertical-align: middle;\n  width: 132px;\n  height: 24px;\n  margin: -4px 6px 0 0;\n}\n\n.Title__categories___-OpJa {\n  margin-top: 15px;\n  font-size: 15px;\n}\n\n.Title__category___1DYth {\n  text-decoration: none;\n  color: #0073bb;\n}\n\n.Title__actions___1Ocjd {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  width: 450px;\n}\n\n.Title__actionReviews___3rhbO {\n  border-radius: 4px;\n  margin-right: 15px;\n  background: linear-gradient(#d90007, #c91400);\n  text-align: center;\n  color: white;\n  font-weight: 500;\n  line-height: 35px;\n  height: 36px;\n  width: 158px;\n}\n.Title__actionReviews___3rhbO:hover {\n  background: #ee0e16;\n  cursor: pointer;\n}\n.Title__actionButton___2fldk {\n  padding: 5px 8px;\n  background: linear-gradient(#fff, #f7f7f7);\n  background-color: #f7f7f7;\n  border: 1px solid #ccc;\n  /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */\n  color: rgb(107, 103, 103);\n  font-size: 13px;\n  font-weight: 600;\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"title": "Title__title___92UwW",
 	"claimed": "Title__claimed___2tU1Q",
-	"name": "Title__name___1LShh"
+	"name": "Title__name___1LShh",
+	"reviewsContainer": "Title__reviewsContainer___3buv0",
+	"stars": "Title__stars___7Rt1K",
+	"categories": "Title__categories___-OpJa",
+	"category": "Title__category___1DYth",
+	"actions": "Title__actions___1Ocjd",
+	"actionReviews": "Title__actionReviews___3rhbO",
+	"actionButton": "Title__actionButton___2fldk"
 };
 
 /***/ }),
