@@ -2086,6 +2086,10 @@ var _Description = __webpack_require__(42);
 
 var _Description2 = _interopRequireDefault(_Description);
 
+var _Photobox = __webpack_require__(70);
+
+var _Photobox2 = _interopRequireDefault(_Photobox);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2105,15 +2109,11 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
     _this.state = {
-      static_nav_links: ["Restaurants", "Nightlife", "Home Services"],
-      static_nav_links_2: ["Write a review", "Events", "Talk", "Collections"],
       name: "",
       address: [],
       phone: "",
       url: "",
-      google_map: "",
-      categories: [],
-      actions: ["Add Photo", "Share", "Save"]
+      categories: []
     };
     return _this;
   }
@@ -2139,7 +2139,6 @@ var Header = function (_Component) {
           address: data.address,
           phone: data.phone_number,
           url: data.url,
-          google_map: data.google_map,
           categories: data.categories
         });
       }).catch(function (err) {
@@ -2149,10 +2148,6 @@ var Header = function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var nav_bar_icons = ["fas fa-utensils", "fas fa-glass-martini", "fas fa-screwdriver"];
-      var action_icons = ["fas fa-camera", "far fa-share-square", "fas fa-bookmark"];
-      // const address = this.state.address.join(" ");
-      // console.log(address);
       return _react2.default.createElement(
         "div",
         null,
@@ -2168,7 +2163,8 @@ var Header = function (_Component) {
             address: this.state.address,
             phone: this.state.phone,
             url: this.state.url
-          })
+          }),
+          _react2.default.createElement(_Photobox2.default, null)
         )
       ) // main div components
       ;
@@ -34206,6 +34202,173 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./Description.css", function() {
 		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./Description.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Photobox = __webpack_require__(72);
+
+var _Photobox2 = _interopRequireDefault(_Photobox);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Photobox = function Photobox() {
+  return _react2.default.createElement(
+    "div",
+    { className: _Photobox2.default.photos },
+    _react2.default.createElement(
+      "div",
+      { className: _Photobox2.default.left },
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.large,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp1.jpg",
+          alt: "left"
+        })
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: _Photobox2.default.right },
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.small,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp3.jpg",
+          alt: "small1"
+        })
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.small,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp4.jpg",
+          alt: "small2"
+        })
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.small,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp5.jpg",
+          alt: "small3"
+        })
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.small,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp6.jpg",
+          alt: "small4"
+        })
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: _Photobox2.default.middle },
+      _react2.default.createElement(
+        "a",
+        { href: "/" },
+        _react2.default.createElement("img", {
+          className: _Photobox2.default.large,
+          src: "http://d31v1g4dpg9evw.cloudfront.net/yelp2.jpg",
+          alt: "middle"
+        })
+      )
+    )
+  );
+};
+
+exports.default = Photobox;
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Photobox__photos___1s6Ru {\n  display: flex;\n  align-items: center;\n}\n\n.Photobox__left___Rw_ju {\n  margin: -15px;\n  left: 0;\n  width: 250px;\n  height: 250px;\n  transform: scale(0.88) translateZ(0);\n  /* -webkit-transform: scale(0.88) translateZ(0); */\n}\n\n.Photobox__middle___28Y_x {\n  margin: -15px;\n  width: 250px;\n  height: 250px;\n  left: 220px;\n  z-index: 1000;\n  box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s ease-out;\n  transform: translateZ(1px);\n}\n\n.Photobox__right___3kBls {\n  order: 1;\n  margin: -15px;\n  left: 0;\n  width: 250px;\n  height: 250px;\n  transform: scale(0.88) translateZ(0);\n}\n\n.Photobox__large___-URU5 {\n  width: 250px;\n  height: 250px;\n}\n\n.Photobox__small___3YAnN {\n  float: left;\n  width: 125px;\n  height: 125px;\n}\n\n.Photobox__left___Rw_ju:hover,\n.Photobox__right___3kBls:hover {\n  z-index: 1001;\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s ease-out;\n  transition-property: transform, box-shadow;\n  transform: scale(1);\n}\n\n.Photobox__right___3kBls:hover ~ .Photobox__middle___28Y_x,\n.Photobox__left___Rw_ju:hover ~ .Photobox__middle___28Y_x {\n  box-shadow: none;\n  transition: all 0.2s ease-out;\n  transition-property: transform, box-shadow;\n  transform: scale(0.88) translateZ(0);\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"photos": "Photobox__photos___1s6Ru",
+	"left": "Photobox__left___Rw_ju",
+	"middle": "Photobox__middle___28Y_x",
+	"right": "Photobox__right___3kBls",
+	"large": "Photobox__large___-URU5",
+	"small": "Photobox__small___3YAnN"
+};
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(71);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(11)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./Photobox.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./Photobox.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 

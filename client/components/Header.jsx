@@ -7,6 +7,7 @@ import styles from "./Header.css";
 import Navigation from "./Navigation.jsx";
 import Title from "./Title.jsx";
 import Description from "./Description.jsx";
+import Photobox from "./Photobox.jsx";
 
 const dbURL = "http://localhost:3000";
 
@@ -14,15 +15,11 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      static_nav_links: ["Restaurants", "Nightlife", "Home Services"],
-      static_nav_links_2: ["Write a review", "Events", "Talk", "Collections"],
       name: "",
       address: [],
       phone: "",
       url: "",
-      google_map: "",
-      categories: [],
-      actions: ["Add Photo", "Share", "Save"]
+      categories: []
     };
   }
 
@@ -42,7 +39,6 @@ class Header extends Component {
           address: data.address,
           phone: data.phone_number,
           url: data.url,
-          google_map: data.google_map,
           categories: data.categories
         });
       })
@@ -51,18 +47,6 @@ class Header extends Component {
       });
   }
   render() {
-    const nav_bar_icons = [
-      "fas fa-utensils",
-      "fas fa-glass-martini",
-      "fas fa-screwdriver"
-    ];
-    const action_icons = [
-      "fas fa-camera",
-      "far fa-share-square",
-      "fas fa-bookmark"
-    ];
-    // const address = this.state.address.join(" ");
-    // console.log(address);
     return (
       <div>
         <Navigation />
@@ -76,6 +60,7 @@ class Header extends Component {
             phone={this.state.phone}
             url={this.state.url}
           />
+          <Photobox />
         </div>
       </div> // main div components
     );
